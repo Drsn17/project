@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style>
+        .stylish-panel {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .stylish-panel > div > div{
+            padding: 10px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1 style="text-align: center">Welcome to User Management portal</h1>
+    <div class="row stylish-panel">
+                        <div class="col-md-4" style="border: 1px solid gray;padding: 10px">
+                <div>
+                    <img src="http://lorempixel.com/200/200/abstract/4/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                    <table>
+                    <tr>
+                        <td>
+                            <h3>First Name : </h3></td><td><h3><%=data.fname%></h3></td></tr>
+                        <tr>
+                            <td><h3>Last Name : </h3></td><td><h3><%=data.lname%></h3></td></tr>
+                    <tr>
+                        <td><p>Date of Birth : </p></td><td><p><%=data.dob%></p></td></tr>
+                    <tr>
+                        <td><p>Password : </p></td><td><p><%=data.password%></p></td></tr>
+                   <tr>
+                        <td> <p>Contact :</p></td><td><p> <%=data.contact_no%></p></td></tr>
+                    <tr>
+                        <td><p>Address : </p></td><td><p><%=data.address%></p></td></tr>
+                    </table>
+                     <a href="/useredit/<%=data._id%>" class="btn btn-primary" title="Edit user">Edit »</a>
+                     <a href='/api/deleteuser/<%=data._id%>' class="btn btn-danger" title="Delete user">Delete»</a>
+                    
+                </div>
+            </div>
+    </div>
+</div>
+
+</body>
+</html>

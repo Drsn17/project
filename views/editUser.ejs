@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add User</title>
+
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script src="http://code.jquery.com/jquery-2.x-git.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    </head>
+
+
+
+<body >
+    
+<div class="container">
+    <div class="row"> 
+        <form role="form" action="/api/edituser/<%=data._id%>" id="contact-form" class="contact-form" method="Post">
+            <h1><center>User's Details</center></h1>
+            <br>
+            <br>
+             <div class="panel panel-default">
+    <div class="panel-body">
+            <div class="row">
+                
+                <div class=" col-md-offset-1 col-md-4">
+                    <div class="form-group">
+                        <lable><b>Enter first Name</b></lable>
+                        <input type="text" class="form-control" name="fname" value="<%=data.fname%>" autocomplete="off" id="fname" >
+                        <lable><b>Date of Birth</b></lable>
+                         <input type="text" class="form-control" name="dob" value="<%=data.dob%>" autocomplete="off" id="dob">
+                          <lable><b>Contact NO</b></lable>
+                         <input type="text" class="form-control" name="contact_no" value="<%=data.contact%>" autocomplete="off" id="contact_no">
+                        
+                    </div>
+                </div>
+                <div class="co-md-offset-7 col-md-4">
+                    <div class="form-group">
+                         <lable><b>Enter Last Name</b></lable>
+                        <input type="text" class="form-control" name="lname" value="<%=data.lname%>" autocomplete="off" id="lname">
+                        <lable><b>E_mail</b></lable>
+                         <input type="email" class="form-control" name="e_mail" value="<%=data.e_mail%>" autocomplete="off" id="email">
+                         <lable><b>Password</b></lable>
+                         <input type="password" class="form-control" name="password" value="<%=data.e_mail%>" autocomplete="off" id="password">
+                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-8">
+                    <div class="form-group">
+                        <lable><b>Address</b></lable>
+                        <textarea class="form-control"name="address" value="<%=data.address%>" autocomplete="off" id="address" placeholder="Address"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-8 col-md-2">
+                   
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                    
+             
+                </div>
+                </div>
+                 </div>
+            </div>
+        </form>
+    </div>
+       
+    </div>
+
+    </body>
+</html>
